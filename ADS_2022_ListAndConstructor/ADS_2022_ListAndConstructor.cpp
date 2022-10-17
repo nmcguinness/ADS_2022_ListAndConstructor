@@ -103,10 +103,31 @@ void print(Iter iter, Iter end)
 int main()
 {
 	//demoEmplace();
+
+	//demo the template print for Point2Ds
 	list<Point2D> ptList;
 	ptList.emplace_back(1, 2);	ptList.emplace_back(3, 4);
 	ptList.emplace_back(5, 6);	ptList.emplace_back(7, 8);
 	list<Point2D>::iterator start = ptList.begin();
 	list<Point2D>::iterator end = ptList.end();
-	print<list<Point2D>::iterator>(start, end);
+	//print<list<Point2D>::iterator>(start, end);
+
+	//demo the template print for floats
+	list<float> numList;
+	numList.push_back(10.2);
+	numList.push_back(20.4);
+	numList.push_back(30.6);
+	//print<list<float>::iterator>(numList.begin(), numList.end());
+
+	//demo the template print working BACKWARDS
+	list<string> nameList;
+	nameList.push_front("anna");
+	nameList.push_front("bea");
+	nameList.push_front("ciaran");
+
+	//in order to print backwards we need reverse_iterators
+	list<string>::reverse_iterator startRev = nameList.rbegin();
+	list<string>::reverse_iterator endRev = nameList.rend();
+
+	cout << *startRev << endl;
 }
