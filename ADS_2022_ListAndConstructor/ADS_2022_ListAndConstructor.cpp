@@ -32,9 +32,18 @@ public:
 		out << point2D.x << "," << point2D.y;
 		return out;
 	}
+
+	Point2D(const Point2D& copy) {
+		cout << "copy constructor" << endl;
+		this->x = copy.getX();
+		this->y = copy.getY();
+	}
 };
 
 int main()
 {
-	std::cout << "Hello World!\n";
+	Point2D spawnPoint(10, 20);
+
+	//copy constructor
+	Point2D p1(spawnPoint);
 }
