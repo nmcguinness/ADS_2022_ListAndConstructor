@@ -17,14 +17,14 @@ private:
 	float x, y;
 public:
 	Point2D() : x(0), y(0) {
-		cout << "constructor" << endl;
+		//	cout << "constructor" << endl;
 	}
 	Point2D(float x, float y) : x(x), y(y) {
-		cout << "constructor" << endl;
+		//	cout << "constructor" << endl;
 	}
 	~Point2D() {
 		this->x = 0; this->y = 0;
-		cout << "destructor" << endl;
+		//	cout << "destructor" << endl;
 	}
 	float getX() const { return this->x; }
 	float getY() const { return this->y; }
@@ -35,7 +35,7 @@ public:
 	}
 
 	Point2D(const Point2D& copy) {
-		cout << "copy constructor" << endl;
+		//	cout << "copy constructor" << endl;
 		this->x = copy.getX();
 		this->y = copy.getY();
 	}
@@ -121,13 +121,16 @@ int main()
 
 	//demo the template print working BACKWARDS
 	list<string> nameList;
-	nameList.push_front("anna");
-	nameList.push_front("bea");
-	nameList.push_front("ciaran");
+	nameList.push_back("anna");
+	nameList.push_back("bea");
+	nameList.push_back("ciaran");
 
 	//in order to print backwards we need reverse_iterators
 	list<string>::reverse_iterator startRev = nameList.rbegin();
 	list<string>::reverse_iterator endRev = nameList.rend();
 
-	cout << *startRev << endl;
+	//startRev++;
+	//cout << *startRev << endl;
+
+	print<list<string>::reverse_iterator>(startRev, endRev);
 }
