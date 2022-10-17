@@ -5,7 +5,7 @@
 #include <list>
 using namespace std;
 /*
-* 1. class Point2D
+* Task 1. class Point2D
 	- 2 floats (x,y)
 	- default, full
 	- destructor
@@ -41,7 +41,7 @@ public:
 	}
 };
 
-int main()
+void demoEmplace()
 {
 	//Point2D spawnPoint(10, 20);
 	//copy constructor
@@ -66,4 +66,33 @@ int main()
 	//lets check that our EMPLACE function added in correct location
 	for (Point2D pt : ptList)
 		cout << pt << endl;
+}
+
+/*
+* Task 2 - Write a print() to print Point2D in a list
+*/
+void print(list<Point2D> list)
+{
+	for (Point2D p : list)
+		cout << p << endl;
+}
+
+template <typename E>
+void print(list<E> list)
+{
+	for (E theObj : list)
+		cout << theObj << endl;
+}
+
+void print(list<Point2D>::iterator iter, list<Point2D>::iterator end)
+{
+	while (iter != end) {
+		cout << *iter << endl;
+		iter++;
+	}
+}
+
+int main()
+{
+	demoEmplace();
 }
