@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <list>
 using namespace std;
 /*
 * 1. class Point2D
@@ -42,8 +43,12 @@ public:
 
 int main()
 {
-	Point2D spawnPoint(10, 20);
-
+	//Point2D spawnPoint(10, 20);
 	//copy constructor
-	Point2D p1(spawnPoint);
+	//Point2D p1(spawnPoint);
+
+	list<Point2D> ptList;
+
+	Point2D p1(1, 2);
+	ptList.push_back(p1);
 }
