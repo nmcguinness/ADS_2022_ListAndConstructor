@@ -92,7 +92,21 @@ void print(list<Point2D>::iterator iter, list<Point2D>::iterator end)
 	}
 }
 
+template <typename Iter>
+void print(Iter iter, Iter end)
+{
+	while (iter != end) {
+		cout << *iter << endl;
+		iter++;
+	}
+}
 int main()
 {
-	demoEmplace();
+	//demoEmplace();
+	list<Point2D> ptList;
+	ptList.emplace_back(1, 2);	ptList.emplace_back(3, 4);
+	ptList.emplace_back(5, 6);	ptList.emplace_back(7, 8);
+	list<Point2D>::iterator start = ptList.begin();
+	list<Point2D>::iterator end = ptList.end();
+	print<list<Point2D>::iterator>(start, end);
 }
