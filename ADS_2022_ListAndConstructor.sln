@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ADS_2022_ListAndConstructor", "ADS_2022_ListAndConstructor\ADS_2022_ListAndConstructor.vcxproj", "{69FB1640-C853-4293-AE92-B71C374E9248}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69FB1640-C853-4293-AE92-B71C374E9248}.Debug|x64.ActiveCfg = Debug|x64
+		{69FB1640-C853-4293-AE92-B71C374E9248}.Debug|x64.Build.0 = Debug|x64
+		{69FB1640-C853-4293-AE92-B71C374E9248}.Debug|x86.ActiveCfg = Debug|Win32
+		{69FB1640-C853-4293-AE92-B71C374E9248}.Debug|x86.Build.0 = Debug|Win32
+		{69FB1640-C853-4293-AE92-B71C374E9248}.Release|x64.ActiveCfg = Release|x64
+		{69FB1640-C853-4293-AE92-B71C374E9248}.Release|x64.Build.0 = Release|x64
+		{69FB1640-C853-4293-AE92-B71C374E9248}.Release|x86.ActiveCfg = Release|Win32
+		{69FB1640-C853-4293-AE92-B71C374E9248}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D4422B6-8E58-4AA1-905D-DB0B512A9045}
+	EndGlobalSection
+EndGlobal
