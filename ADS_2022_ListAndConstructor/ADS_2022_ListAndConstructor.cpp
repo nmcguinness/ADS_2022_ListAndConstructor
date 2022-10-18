@@ -7,18 +7,46 @@ using namespace std;
 void demoPushBackOrFront();
 void demoPrintFromList();
 void demoPrintAsReference();
+void demoPrintAsPointer();
 void demoEmplace();
 void demoIterators();
+void demoTemplatePrint();
+
+void print(list<Point2D> list)
+{
+	for (const Point2D& p : list)
+		cout << p << endl;
+}
+template <typename E>
+void print(list<E> list)
+{
+	for (const E& theObj : list)
+		cout << theObj << endl;
+}
 
 int main()
 {
 	//demoPushBackOrFront();
-	demoPrintFromList();
+	//demoPrintFromList();
+	demoPrintAsPointer();
 	//demoPrintAsReference();
 	//demoEmplace();
 	//demoIterators();
+	demoTemplatePrint();
 }
 
+void demoTemplatePrint() {
+	list<Point2D> pList;
+	pList.emplace_front(3, 4);
+	pList.emplace_front(6, 8);
+	pList.emplace_front(9, 12);
+	print<Point2D>(pList);
+
+	list<string> namesList;
+	namesList.push_back("ana");
+	namesList.push_back("bea");
+	print<string>(namesList);
+}
 void demoPushBackOrFront()
 {
 	list<Point2D> pList;
